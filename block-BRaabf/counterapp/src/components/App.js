@@ -5,7 +5,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             count: 0,
-            steps: 5,
+            step: 5,
             max: 15
         }
     }
@@ -19,7 +19,7 @@ class App extends React.Component {
 
     handleDecrement = () => {
         this.setState({
-            count: 0
+            count: this.state.count - this.state.step
         })
     }
     handleReset = () => {
@@ -27,15 +27,16 @@ class App extends React.Component {
             count: 0
         })
     }
+    handleClick = (val)=>{
+        this.setState({ step: val })
+    }
     render() {
         return (
             <div className="container">
                 <h1>{this.state.count}</h1>
                 <div className="steps">
                     <h2>Steps</h2>
-                    {[5, 10, 15].map((step) => (<button onClick={
-                        () => { this.setState({ step: step }) }
-                    } className={this.state.step === step ? 'active--step' : ''}>{step}</button>))}</div>
+                    {[5, 10, 15].map((step) => (<button onClick={()=>this.handleClick(step)} className={this.state.step === step ? 'active--step' : ''}>{step}</button>))}</div>
 
                 <div className="steps">
                     <h2>Max Value</h2>
