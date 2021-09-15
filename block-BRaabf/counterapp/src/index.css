@@ -46,7 +46,7 @@ code {
   cursor:pointer;
 }
 
-.active--step{
-  background: cornflowerblue;
-  color: black;
+.active--step {
+  background: cornflowerblue !important;
+  color: black !important;
 }
