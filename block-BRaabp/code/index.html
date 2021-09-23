@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
-
+<body class="m-10">
     <div id="root"></div>
 
     <script type="text/babel">
@@ -54,7 +54,9 @@
                                 fonts.map((data) => (
                                     <div className="flex-50 display-box" key={data}>
                                         <h2>{data}</h2>
-                                       
+                                        <div>
+                                            <h2 style={{ fontFamily: data, fontSize: size }}>{this.state.inputText}</h2>
+                                        </div>
                                     </div>
                                 ))
                             }
