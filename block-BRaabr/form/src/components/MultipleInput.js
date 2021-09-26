@@ -53,7 +53,7 @@ class MultipleInput extends React.Component {
                     <label className="text-xl font-bold block" htmlFor="textarea-diabled">Textarea Disabled</label>
                     <textarea className="w-11/12 mt-3" disabled rows="5" name="textDisabled" value={this.state.textDisabled}></textarea>
 
-                    <input className="w-11/12 block p-2 cursor-pointer my-3 bg-green-500 rounded-md text-white font-bold" type="submit" value="Submit" />
+                    <input className="w-11/12 block p-2 cursor-pointer my-3 bg-blue-500 rounded-md text-white font-bold" type="submit" value="Submit" />
                 </form>
             </section>
         )

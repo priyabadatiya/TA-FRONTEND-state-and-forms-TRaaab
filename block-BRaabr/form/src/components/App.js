@@ -7,9 +7,7 @@ function App() {
         <>
         <MultipleInput />
         
-        {/* <FormValidation /> */}
-
-       
+        <FormValidation />
         </>
     )
 }
