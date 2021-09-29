@@ -1,9 +1,9 @@
 import React from "react";
-class Main extends React.Component {
+class Product extends React.Component {
     constructor(props) {
         super(props);
     }
 
 
 }
-export default Main;
+export default Product;
