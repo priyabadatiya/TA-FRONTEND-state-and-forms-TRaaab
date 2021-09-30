@@ -1,9 +1,14 @@
 import React from "react";
-class Aside extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
-
+export function aside(props) {
+  let sizes = props.products
+    .reduce((acc, cv) => {
+      acc = acc.concat(cv.availableSizes);
+      return acc;
+    }, []).reduce((acc, cv) => {
+      if (!acc.includes(cv)) {
+        acc.push(cv);
+      }
+      return acc;
+    }, []);
 }
-export default Aside;
