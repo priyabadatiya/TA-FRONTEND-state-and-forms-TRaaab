@@ -1,4 +1,5 @@
 import React from 'react';
+import Orderby from './Orderby'
 class Product extends React.Component {
   constructor(props) {
     super(props);
@@ -19,18 +20,18 @@ class Product extends React.Component {
           </span>
         </div>
 
-        <img className="" src={`/static/products/${this.props.sku}_1.jpg`} />
-        <h3 className="p-4 ">{this.props.title}</h3>
+        <img className="" src={`/static/products/${this.props.product.sku}_1.jpg`} />
+        <h3 className="p-4 ">{this.props.product.title}</h3>
         <div className="flex justify-center mb-5">
           <hr className="w-2/12  border-2 border-yellow-500" />
         </div>
 
         <div>
-          {this.props.currencyFormat}
+          {this.props.product.currencyFormat}
           <span className="font-bold text-2xl">
-            {this.props.price.toString().split('.')[0]}
+            {this.props.product.price.toString().split('.')[0]}
           </span>
-          {this.customFn(this.props.price)}
+          {this.customFn(this.props.product.price)}
         </div>
         <span className="text-gray-400">
           or 5x<span className="font-bold text-xl">$26.98</span>
